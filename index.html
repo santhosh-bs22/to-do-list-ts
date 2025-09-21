@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskVault - Organize Your Life</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+   <link rel="stylesheet" href="dist/styles.css" />
+  </head>
+  <body>
+    <!-- Home Page -->
+    <div id="homePage">
+      <!-- Header & Navigation -->
+      <header>
+        <div class="container nav-container">
+          <div class="logo">
+            <i class="fas fa-tasks"></i>
+            <span>TaskVault</span>
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#hero" class="nav-link home-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#features" class="nav-link">Features</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" id="navSignIn">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+              >
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="container">
+          <h1>Organize Your Life with TaskVault</h1>
+          <p>
+            The ultimate to-do list app that helps you stay productive and
+            manage your tasks efficiently with voice commands, dark mode, and
+            more.
+          </p>
+          <button class="btn" id="getStartedBtn">Get Started Now</button>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="features">
+        <div class="container">
+          <h2 class="section-title">Amazing Features</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-microphone"></i>
+              </div>
+              <h3>Voice Input</h3>
+              <p>
+                Add tasks quickly using voice commands with our advanced speech
+                recognition technology.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-moon"></i>
+              </div>
+              <h3>Dark Mode</h3>
+              <p>
+                Switch to dark mode for comfortable task management in low-light
+                environments.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-download"></i>
+              </div>
+              <h3>Export Tasks</h3>
+              <p>
+                Download your tasks in PDF or CSV format for backup or sharing
+                purposes.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3>Responsive Design</h3>
+              <p>
+                Access your tasks from any device - desktop, tablet, or mobile
+                phone.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3>Smart Organization</h3>
+              <p>
+                Categorize, prioritize, and sort your tasks for maximum
+                productivity.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-bell"></i>
+              </div>
+              <h3>Reminders</h3>
+              <p>
+                Set due dates and get notifications for your important tasks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="section-title">About TaskVault</h2>
+          <div class="about-content">
+            <p>
+              TaskVault is designed to help you organize your life and boost
+              your productivity. With a clean, intuitive interface and powerful
+              features, managing your daily tasks has never been easier.
+            </p>
+            <p>
+              Our mission is to provide a seamless task management experience
+              that adapts to your needs, whether you're a student, professional,
+              or busy parent. We believe in simplicity, efficiency, and
+              elegance.
+            </p>
+            <p>
+              TaskVault was created with love by a team of productivity
+              enthusiasts who understand the importance of staying organized in
+              today's fast-paced world.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Auth Pages -->
+    <div id="authPage" class="auth-container">
+      <div class="auth-header">
+        <a href="#" class="auth-logo" id="authLogo">
+          <i class="fas fa-tasks"></i>
+          <span>TaskVault</span>
+        </a>
+        <button class="auth-back-btn" id="authBackBtn">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+      </div>
+
+      <div class="auth-forms">
+        <!-- Sign In Form -->
+        <div id="signInForm" class="auth-form">
+          <h2>Sign In to Your Account</h2>
+          <p>Welcome back! Please enter your details</p>
+
+          <div class="form-group">
+            <label for="signInEmail">Email</label>
+            <input
+              type="email"
+              id="signInEmail"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="signInPassword">Password</label>
+            <input
+              type="password"
+              id="signInPassword"
+              placeholder="Enter your password"
+              required
+            />
+            <span class="toggle-password" id="toggleSignInPassword">
+              <i class="fas fa-eye"></i>
+            </span>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-container">
+              <input type="checkbox" id="rememberMe" />
+              <span class="checkmark"></span>
+              Remember me
+            </label>
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
+
+          <button class="auth-btn" id="signInBtn">Sign In</button>
+
+          <div class="auth-divider">
+            <span>Or continue with</span>
+          </div>
+
+          <div class="social-auth">
+            <button class="social-btn google-btn">
+              <i class="fab fa-google"></i> Google
+            </button>
+            <button class="social-btn github-btn">
+              <i class="fab fa-github"></i> GitHub
+            </button>
+          </div>
+
+          <div class="auth-switch">
+            Don't have an account? <a href="#" id="switchToSignUp">Sign Up</a>
+          </div>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signUpForm" class="auth-form active">
+          <h2>Create Your Account</h2>
+          <p>Get started with your free account</p>
+
+          <div class="form-group">
+            <label for="signUpName">Full Name</label>
+            <input
+              type="text"
+              id="signUpName"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="signUpEmail">Email</label>
+            <input
+              type="email"
+              id="signUpEmail"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="signUpPassword">Password</label>
+            <input
+              type="password"
+              id="signUpPassword"
+              placeholder="Create a password"
+              required
+            />
+            <span class="toggle-password" id="toggleSignUpPassword">
+              <i class="fas fa-eye"></i>
+            </span>
+            <div class="password-strength">
+              <div class="strength-meter"></div>
+              <span class="strength-text">Password strength</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signUpConfirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="signUpConfirmPassword"
+              placeholder="Confirm your password"
+              required
+            />
+            <span class="toggle-password" id="toggleSignUpConfirmPassword">
+              <i class="fas fa-eye"></i>
+            </span>
+          </div>
+
+          <label class="checkbox-container">
+            <input type="checkbox" id="termsAgree" required />
+            <span class="checkmark"></span>
+            I agree to the <a href="#">Terms of Service</a> and
+            <a href="#">Privacy Policy</a>
+          </label>
+
+          <button class="auth-btn" id="signUpBtn">Create Account</button>
+
+          <div class="auth-divider">
+            <span>Or continue with</span>
+          </div>
+
+          <div class="social-auth">
+            <button class="social-btn google-btn">
+              <i class="fab fa-google"></i> Google
+            </button>
+            <button class="social-btn github-btn">
+              <i class="fab fa-github"></i> GitHub
+            </button>
+          </div>
+
+          <div class="auth-switch">
+            Already have an account? <a href="#" id="switchToSignIn">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- App Page -->
+    <div id="appPage" class="app-container">
+      <!-- Header with animation and mode toggle -->
+      <div class="app-header">
+        <div class="title-container">
+          <h1 class="app-title">TaskVault Manager</h1>
+          <p class="subtitle">Organize your tasks with priority levels</p>
+        </div>
+        <div class="header-buttons">
+          <button id="appThemeToggle" class="app-theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="#" class="home-button" id="appHomeButton">
+            <i class="fas fa-home"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- User Info Section -->
+      <div class="user-info" id="userInfoSection">
+        <span id="welcomeMessage">Welcome, User</span>
+        <button id="logoutBtn" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+
+      <!-- Input Section -->
+      <div class="input-section">
+        <div class="input-row">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="What needs to be done?"
+            class="task-input"
+          />
+          <input type="date" id="dueDate" class="date-input" />
+          <select id="prioritySelect" class="priority-select">
+            <option value="high">High Priority</option>
+            <option value="medium" selected>Medium Priority</option>
+            <option value="low">Low Priority</option>
+          </select>
+        </div>
+        <div class="button-group">
+          <button id="addTaskBtn" class="app-btn btn-primary">
+            <i class="fas fa-plus"></i> Add Task
+          </button>
+          <button id="voiceInputBtn" class="app-btn voice-btn">
+            <i class="fas fa-microphone"></i> Voice Input
+          </button>
+          <button id="downloadBtn" class="app-btn btn-secondary">
+            <i class="fas fa-download"></i> Export Tasks
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter and Stats Section -->
+      <div class="filter-section">
+        <div class="filter-buttons">
+          <button data-filter="all" class="filter-btn active">All Tasks</button>
+          <button data-filter="active" class="filter-btn">Active</button>
+          <button data-filter="completed" class="filter-btn">Completed</button>
+        </div>
+
+        <div class="stats">
+          <div id="totalTasks">
+            Total: <span class="stat-value total-stat">0</span>
+          </div>
+          <div id="completedTasks">
+            Completed: <span class="stat-value completed-stat">0</span>
+          </div>
+          <div id="activeTasks">
+            Active: <span class="stat-value active-stat">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sort Section -->
+      <div class="sort-section">
+        <span class="sort-label">Sort by:</span>
+        <button data-sort="priority" class="sort-btn active">Priority</button>
+        <button data-sort="date" class="sort-btn">Due Date</button>
+        <button data-sort="added" class="sort-btn">Date Added</button>
+      </div>
+
+      <!-- To-Do List -->
+      <ul id="taskList" class="task-list">
+        <!-- Tasks will be added here dynamically -->
+      </ul>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="empty-state">
+        <i class="fas fa-clipboard-list empty-icon"></i>
+        <p class="empty-title">Your to-do list is empty</p>
+        <p class="empty-subtitle">Add a task to get started!</p>
+      </div>
+
+      <!-- Completed Tasks Section -->
+      <div id="completedSection" class="completed-section">
+        <h2 class="completed-title">Completed Tasks</h2>
+        <ul id="completedList" class="task-list">
+          <!-- Completed tasks will be added here dynamically -->
+        </ul>
+      </div>
+    </div>
+
+    <script src="dist/script.js">
+      
+    </script>
+  </body>
+</html>
